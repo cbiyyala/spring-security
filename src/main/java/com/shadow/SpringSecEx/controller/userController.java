@@ -20,4 +20,10 @@ public class userController {
         return userService.registerUser(user);
     }
 
+    @PostMapping("/login")
+    public String login(@RequestBody users user) {
+        return userService.loginUser(user);
+        // return "Successfully logged in as " + user.getUsername();
+    }
+
 }
